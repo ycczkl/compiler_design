@@ -1,5 +1,3 @@
-package compiler_design;
-
 public class ProtoToken {
 	private int lineNum;
 	private int colNum;

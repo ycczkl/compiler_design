@@ -1,5 +1,3 @@
-package compiler_design;
-
 public class NumberToken extends ProtoToken{
 	private double lexeme;
 	

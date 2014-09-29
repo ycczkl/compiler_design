@@ -1,5 +1,3 @@
-package compiler_design;
-
 public class OperatorToken extends ProtoToken {
 	private String lexeme;
 	

@@ -1,5 +1,3 @@
-package compiler_design;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 

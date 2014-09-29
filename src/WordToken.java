@@ -1,5 +1,3 @@
-package compiler_design;
-
 public class WordToken extends ProtoToken{
 	
 	private String lexeme;
