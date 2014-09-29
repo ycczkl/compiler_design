@@ -19,14 +19,13 @@ public class FileScanner {
 
 	public FileScanner(String path) throws FileNotFoundException, IOException {
 		this.path = path;
-
 		this.File = new Scanner(new java.io.File(path));
 		this.st = new StreamTokenizer(new FileReader(this.path));
 	}
 
 	public ProtoToken[] gettoken() throws IOException {
 		int colNum = 0;
-
+//		init ArrayList to store tokens
 		ArrayList<ProtoToken> tokenList = new ArrayList<ProtoToken>();
 
 		// print the stream tokens
@@ -41,19 +40,21 @@ public class FileScanner {
 				eof = true;
 				break;
 				
-			case StreamTokenizer.TT_EOL:
+			case StreamTokenizer.TT_EOL:				
 				break;
 				
 			case StreamTokenizer.TT_WORD:
-				
+//				Push wordtoken to tokenlist
 				tokenList.add(new WordToken(st.lineno(), colNum, st.sval));
 				break;
 				
 			case StreamTokenizer.TT_NUMBER:
+//				push numbertoken to list
 				tokenList.add(new NumberToken(st.lineno(), colNum, st.nval));
 				break;
 				
 			default:
+//				push operatortoken into list
 				tokenList.add(new OperatorToken(st.lineno(), colNum, ""+(char)token));
 				if (token == '!') {
 					eof = true;
