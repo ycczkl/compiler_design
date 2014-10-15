@@ -2,7 +2,7 @@ public class OperatorToken extends ProtoToken {
 	private String lexeme;
 	
 	public OperatorToken(int lineNum, int colNum, String lexeme) {
-		super(lineNum, colNum, "tokop");
+		super(lineNum, colNum, SymbolTable.getOperatorTokenName(lexeme));
 		this.lexeme = lexeme;
 		
 	}
@@ -12,6 +12,6 @@ public class OperatorToken extends ProtoToken {
 	}
 	
 	public String toString() {
-		return getLexeme() + "  tokop";
+		return getLexeme() + " " + SymbolTable.getOperatorTokenName(lexeme);
 	}
 }

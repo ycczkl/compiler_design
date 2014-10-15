@@ -1,1 +1,4 @@
-PROGRAM Sample (Input, Output);  CONST     x  = 15; BEGIN 	      END;
+Program Program1;   
+Begin    
+ ()  
+End.

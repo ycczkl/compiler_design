@@ -14,6 +14,7 @@ public class FileScanner {
 		this.path = path;
 		this.File = new Scanner(new java.io.File(path));
 		this.st = new StreamTokenizer(new FileReader(this.path));
+		st.lowerCaseMode(true);
 	}
 
 	public ProtoToken[] gettoken() throws IOException {

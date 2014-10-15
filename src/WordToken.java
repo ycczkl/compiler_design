@@ -3,7 +3,7 @@ public class WordToken extends ProtoToken{
 	private String lexeme;
 	
 	public WordToken( int lineNum, int colNum, String lexeme) {
-		super( lineNum, colNum, "tokword");
+		super( lineNum, colNum, SymbolTable.getWordTokenName(lexeme));
 		this.lexeme = lexeme;
 		
 	}
@@ -13,6 +13,6 @@ public class WordToken extends ProtoToken{
 	}
 	
 	public String toString() {
-		return getLexeme() + "  tokword";
+		return getLexeme() + " " + this.getTokenName();
 	}
 }
